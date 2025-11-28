@@ -3,278 +3,87 @@
 <head>
   <meta charset="utf-8">
   <title>MamaBaba's Internal Tools</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: radial-gradient(circle at top, #fef3c7, #f3f4f6);
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-    }
-
-    .wrapper {
-      max-width: 900px;
-      width: 100%;
-      background: #ffffff;
-      border-radius: 24px;
-      padding: 32px 24px 28px;
-      box-shadow:
-        0 20px 40px rgba(0, 0, 0, 0.08),
-        0 0 0 1px rgba(148, 163, 184, 0.25);
-    }
-
-    .header {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      margin-bottom: 24px;
-      flex-wrap: wrap;
-    }
-
-    .logo-circle {
-      width: 56px;
-      height: 56px;
-      border-radius: 50%;
-      background: #f97316;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 800;
-      font-size: 24px;
-      color: #fff;
-      letter-spacing: 1px;
-    }
-
-    .title-block h1 {
-      font-size: 1.6rem;
-      font-weight: 700;
-      color: #0f172a;
-    }
-
-    .title-block p {
-      font-size: 0.95rem;
-      color: #6b7280;
-      margin-top: 2px;
-    }
-
-    .badge {
-      margin-left: auto;
-      padding: 4px 10px;
-      border-radius: 999px;
-      border: 1px solid #22c55e33;
-      background: #ecfdf3;
-      color: #15803d;
-      font-size: 0.75rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-      white-space: nowrap;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 16px;
-      margin-top: 8px;
-    }
-
-    .card {
-      border-radius: 18px;
-      padding: 16px 16px 14px;
-      background: #f9fafb;
-      border: 1px solid transparent;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      transition:
-        transform 0.12s ease-out,
-        box-shadow 0.12s ease-out,
-        border-color 0.12s ease-out,
-        background-color 0.12s ease-out;
-    }
-
-    .card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.12);
-      border-color: #e5e7eb;
-      background: #ffffff;
-    }
-
-    .card h2 {
-      font-size: 1rem;
-      font-weight: 700;
-      color: #111827;
-      margin-bottom: 4px;
-    }
-
-    .tag {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 0.75rem;
-      color: #4b5563;
-      margin-bottom: 6px;
-    }
-
-    .tag-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 999px;
-    }
-
-    .tag-dot.tools { background: #6366f1; }
-    .tag-dot.ordergen { background: #22c55e; }
-    .tag-dot.auditor { background: #f97316; }
-    .tag-dot.expiry  { background: #ef4444; }
-
-    .card p {
-      font-size: 0.85rem;
-      color: #6b7280;
-      margin-bottom: 10px;
-    }
-
-    .card a {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 6px;
-      text-decoration: none;
-      font-size: 0.85rem;
-      font-weight: 600;
-      padding: 8px 10px;
-      border-radius: 999px;
-      border: none;
-      background: #111827;
-      color: #f9fafb;
-      box-shadow: 0 3px 10px rgba(15, 23, 42, 0.25);
-      cursor: pointer;
-    }
-
-    .card a span.arrow {
-      font-size: 1rem;
-      transform: translateY(1px);
-    }
-
-    .footer {
-      margin-top: 18px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 0.78rem;
-      color: #9ca3af;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-
-    .footer strong {
-      font-weight: 600;
-      color: #6b7280;
-    }
-
-    @media (max-width: 640px) {
-      .wrapper {
-        padding: 24px 18px 20px;
-      }
-      .badge {
-        margin-left: 0;
-      }
-    }
-  </style>
+  <!-- Use your existing stylesheet from the tools app -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="wrapper">
-    <div class="header">
-      <!-- swap this for your actual logo if you want -->
-      <div class="logo-circle">MB</div>
 
-      <div class="title-block">
-        <h1>MamaBaba's Internal Tools</h1>
-        <p>Quick launch for all your management apps.</p>
-      </div>
-
-      <div class="badge">Internal Access</div>
+<div class="page">
+  <!-- HEADER -->
+  <div class="top-bar">
+    <!-- static path, no Jinja here -->
+    <img class="logo" src="mabaslogo.jpg" alt="MamaBaba's logo">
+    <div class="title-wrap">
+      <h1>Inventory & Store Tools</h1>
+      <p>MamaBaba’s Mini Warehouse Store · Internal Systems</p>
     </div>
-
-    <div class="grid">
-      <!-- Inventory Tools -->
-      <div class="card">
-        <div>
-          <div class="tag">
-            <span class="tag-dot tools"></span>
-            <span>Inventory Toolkit</span>
-          </div>
-          <h2>Tools</h2>
-          <p>Central utilities for inventory, scanning and other internal helper tools.</p>
-        </div>
-        <a href="https://tools.mamababas.org/" target="_blank" rel="noopener">
-          Open Tools
-          <span class="arrow">↗</span>
-        </a>
-      </div>
-
-      <!-- Order Generator -->
-      <div class="card">
-        <div>
-          <div class="tag">
-            <span class="tag-dot ordergen"></span>
-            <span>Ordering</span>
-          </div>
-          <h2>OrderGen</h2>
-          <p>Generate purchase orders from sales / inventory data with your custom logic.</p>
-        </div>
-        <a href="https://ordergen.mamababas.org/" target="_blank" rel="noopener">
-          Open OrderGen
-          <span class="arrow">↗</span>
-        </a>
-      </div>
-
-      <!-- Auditor -->
-      <div class="card">
-        <div>
-          <div class="tag">
-            <span class="tag-dot auditor"></span>
-            <span>Audits & Checks</span>
-          </div>
-          <h2>Auditor</h2>
-          <p>Compare scanned counts vs system records and track discrepancies.</p>
-        </div>
-        <a href="https://auditor.mamababas.org/" target="_blank" rel="noopener">
-          Open Auditor
-          <span class="arrow">↗</span>
-        </a>
-      </div>
-
-      <!-- Expiry Tracker -->
-      <div class="card">
-        <div>
-          <div class="tag">
-            <span class="tag-dot expiry"></span>
-            <span>Expiry</span>
-          </div>
-          <h2>Expiry Tracker</h2>
-          <p>Scan products to capture and manage expiry dates across your stores.</p>
-        </div>
-        <a href="https://expiry.mamababas.org/" target="_blank" rel="noopener">
-          Open Expiry Tracker
-          <span class="arrow">↗</span>
-        </a>
-      </div>
-    </div>
-
-    <div class="footer">
-      <span><strong>Tip:</strong> Bookmark this page as your “MamaBaba's Hub”.</span>
-      <span>mamababas.org · internal use only</span>
-    </div>
+    <div class="badge">MamaBaba’s · Internal</div>
   </div>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <section class="panel tool-section">
+      <div class="tool-hero">
+        <div class="tool-hero-text">
+          <h2>Tool Hub</h2>
+          <p>Choose a tool below. Each one opens in a new tab.</p>
+        </div>
+      </div>
+
+      <div class="tool-grid">
+        <!-- TOOLS APP -->
+        <a class="tool-card" href="https://tools.mamababas.org/" target="_blank" rel="noopener">
+          <div class="tool-card-pill">Inventory Toolkit</div>
+          <h3>Tools</h3>
+          <p>Central utilities for inventory, scanning and other helper tools.</p>
+          <div class="tool-card-meta">
+            <span>Barcode lookup</span>
+            <span>Inventory utilities</span>
+          </div>
+        </a>
+
+        <!-- ORDERGEN -->
+        <a class="tool-card" href="https://ordergen.mamababas.org/" target="_blank" rel="noopener">
+          <div class="tool-card-pill tool-card-pill-soft">Ordering</div>
+          <h3>OrderGen</h3>
+          <p>Generate purchase orders based on sales and inventory data.</p>
+          <div class="tool-card-meta">
+            <span>Automatic ordering</span>
+            <span>Purchase planning</span>
+          </div>
+        </a>
+
+        <!-- AUDITOR -->
+        <a class="tool-card" href="https://auditor.mamababas.org/" target="_blank" rel="noopener">
+          <div class="tool-card-pill tool-card-pill-soft">Audits</div>
+          <h3>Auditor</h3>
+          <p>Compare scanned counts with system records and spot discrepancies.</p>
+          <div class="tool-card-meta">
+            <span>Stock checks</span>
+            <span>Discrepancy reports</span>
+          </div>
+        </a>
+
+        <!-- EXPIRY -->
+        <a class="tool-card" href="https://expiry.mamababas.org/" target="_blank" rel="noopener">
+          <div class="tool-card-pill tool-card-pill-soft">Expiry</div>
+          <h3>Expiry Tracker</h3>
+          <p>Scan products and track expiry dates across all locations.</p>
+          <div class="tool-card-meta">
+            <span>Expiry scanning</span>
+            <span>Waste reduction</span>
+          </div>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    Created by Jatinder · MamaBaba’s Internal Systems
+  </footer>
+</div>
+
 </body>
 </html>
